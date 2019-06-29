@@ -1,8 +1,8 @@
-# Toy Robot Challenge
+# Toy Robot Simulator
 
 ## By Clinton Forster
 
-### This is my version of the Toy Robot Challenge made as a terminal app with Ruby 2.5.5 using Visual Studio Code.
+### This is my version of the Toy Robot Simulator made as a terminal app with Ruby 2.5.5 using Visual Studio Code.
 
 Github Repository: https://github.com/The4star/toy_robot
 
@@ -34,7 +34,7 @@ Create a library that can read in commands of the following form:
 1. Download or Clone the repository
 2. Change to the lib (library) directory
 ```ruby
-$ cd lib/
+$ cd lib
 ```
 3. Run the app.rb file
 ```ruby
@@ -54,3 +54,7 @@ $ ruby app.rb
 
 ![expected i/o 1](./screenshots/4.JPG "Expected input/output example 3")
 
+## Discussion
+My Goal was to make simple, easy to read code that did exactly what was required by the instructions. The Robot and Table were created in seperate files as classes within a module so that they could easily be accessed by the app file which runs the simulation.
+
+Enjoy.
