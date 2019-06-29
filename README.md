@@ -48,9 +48,9 @@ $ ruby app.rb
 
 ### Examples of expected input and output:
 
-![expected i/o 1](./screenshots/2.JPG "Expected input/output example 1")
+![expected i/o 1](./screenshots/2.jpg "Expected input/output example 1")
 
-![expected i/o 2](./screenshots/3.JPG "Expected input/output example 2")
+![expected i/o 2](./screenshots/3.jpg "Expected input/output example 2")
 
 ![expected i/o 1](./screenshots/4.JPG "Expected input/output example 3")
 
