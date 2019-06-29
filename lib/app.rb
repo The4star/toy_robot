@@ -22,17 +22,25 @@ input = gets().strip
 
 while input != "EXIT"
     if input.include?("PLACE")
+
         placement_occured = false
+
         place_input = input.gsub(/,/, ' ').split(" ")
         x = place_input[1].to_i
         y = place_input[2].to_i
         robot_direction = place_input[3]
         robot.directions.each do |direction|
             if direction == robot_direction
-                robot.place(x, y, direction)
-                input = gets().strip
-                placed = true
-                placement_occured = true
+                if x.between?(table.min_x, table.max_x) && y.between?(table.min_y, table.max_y)
+                    robot.place(x, y, direction)
+                    input = gets().strip
+                    placed = true
+                    placement_occured = true
+                else
+                    puts "Cannot place robot outside of table parameters \nx and y values must be between 0 and 4"
+                    placement_occured = nil
+                    input = gets().strip
+                end
             end
         end
         if placement_occured == false
@@ -46,10 +54,10 @@ while input != "EXIT"
                 robot.move(table)
                 input = gets().strip
             when "LEFT" 
-                robot.left()
+                robot.left(robot)
                 input = gets().strip
             when "RIGHT" 
-                robot.right()
+                robot.right(robot)
                 input = gets().strip
             when "REPORT"
                 robot.report()

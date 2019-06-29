@@ -51,28 +51,28 @@ module Robot
             end
         end
 
-        def left()
-            @directions.each_with_index do |direction, index|
-                if direction == @direction 
-                    if index == 0 
-                        @direction = @directions[3]
-                    else 
-                        @direction = @directions[index-1]
-                    end
+        def left(robot)
+            new_direction_index = 0
+            @directions.each_with_index do |value, index|
+                if robot.direction == value 
+                   new_direction_index = index - 1
                 end
             end
+            robot.direction = @directions[new_direction_index]
         end
 
-        def right()
-            @directions.each_with_index do |direction, index|
-                if direction == @direction 
-                    if index == 3 
-                        @direction = @directions[0]
+        def right(robot)
+            new_direction_index = 0
+            @directions.each_with_index do |value, index|
+                if robot.direction == value 
+                    if index == 3
+                        new_direction_index = 0
                     else
-                        @direction = @directions[index+1]
+                        new_direction_index = index + 1
                     end
                 end
             end
+            robot.direction = @directions[new_direction_index]
         end
 
     end
