@@ -2,8 +2,6 @@ module Robot
 
     class Robot
 
-        
-
         attr_accessor(:x, :y, :direction, :directions)
 
         def initialize()
